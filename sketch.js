@@ -48,3 +48,24 @@ function draw() {
 game.end();
   }
 }
+
+fruits(){
+  if (World.frameCount%80===0){
+  fruit=createSprite(600, 200, 20, 20);
+  fruit.scale=0.2;
+    r=Math.round(random(1, 4));
+    if(r==1){
+      fruit.addImage("fruit1",fruit1_img )
+    } else if (r==2){
+      fruit.addImage("fruit2", fruit2_img)
+    } else if (r==3){
+      fruit.addImage("fruit3", fruit3_img)       
+    } else if (r==4){
+        fruit.addImage("fruit4", fruit4_img)       
+    }
+    
+   fruit.y=Math.round(random(50, 340));
+    
+    fruit.velocityX=-7;
+    fruit.setLifetime=100;
+  }
